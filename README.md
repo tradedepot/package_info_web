@@ -24,4 +24,3 @@ PackageInfo.fromPlatform().then((PackageInfo packageInfo) {
   String buildNumber = packageInfo.buildNumber;
 });
 ```
-lutter/flutter/issues/new) to send feedback or report a bug. Thank you!
