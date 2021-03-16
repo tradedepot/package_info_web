@@ -34,7 +34,7 @@ class PackageInfoPlugin {
     final url =
         '${Uri.parse(window.document.baseUri).removeFragment()}version.json';
 
-    final response = await get(url);
+    final response = await get(Uri.parse(url));
     final versionMap = _getVersionMap(response);
 
     return {
