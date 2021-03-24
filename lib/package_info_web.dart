@@ -32,9 +32,9 @@ class PackageInfoPlugin {
 
   Future<Map<String, dynamic>> getAll() async {
     final url =
-        '${Uri.parse(window.document.baseUri).removeFragment()}version.json';
+        '${Uri.parse(window.document.baseUri!).removeFragment()}version.json';
 
-    final response = await get(url);
+    final response = await get(Uri.parse(url));
     final versionMap = _getVersionMap(response);
 
     return {
@@ -53,7 +53,6 @@ class PackageInfoPlugin {
         return <String, dynamic>{};
       }
     } else {
-      print('not found');
       return <String, dynamic>{};
     }
   }
