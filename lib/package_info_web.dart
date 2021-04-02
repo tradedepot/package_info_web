@@ -10,7 +10,7 @@ import 'package:http/http.dart';
 /// The web implementation of [PackageInfoPlatform].
 ///
 /// This class implements the `package:package_info_plus` functionality for the web.
-class PackageInfoPlugin {
+class PackageInfoWebPlugin {
   /// Registers this class as the default instance of [PackageInfoPlatform].
   static void registerWith(Registrar registrar) {
     final channel = MethodChannel(
@@ -19,7 +19,7 @@ class PackageInfoPlugin {
       registrar,
     );
 
-    final instance = PackageInfoPlugin();
+    final instance = PackageInfoWebPlugin();
     channel.setMethodCallHandler(instance.handleMethodCall);
   }
 

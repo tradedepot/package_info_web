@@ -27,5 +27,5 @@ flutter:
   plugin:
     platforms:
       web:
-        pluginClass: PackageInfoPlugin
+        pluginClass: PackageInfoWebPlugin
         fileName: package_info_web.dart
